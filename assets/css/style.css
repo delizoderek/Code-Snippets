@@ -1,0 +1,52 @@
+:root{
+    --container-border-radius: 7px;
+}
+
+body{
+    background: salmon;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.snippet-borders{
+    border-color: white;
+    border-width: 2px;
+    border-radius: var(--container-border-radius);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-color: white;
+    border-width: 2px;
+    border-style: dashed;
+    border-radius: var(--container-border-radius);
+    position: relative;
+    margin: 20px;
+    padding:10px;
+}
+
+.title {
+    display:flex;
+    border-color:white;
+    border-radius: var(--container-border-radius);
+    border-style: solid;
+    border-width: 2px;
+    background: orange;
+    position: absolute;
+    top: -40px;
+    width: 70%;
+    align-self: center;
+}
+
+.box{
+    display:flex;
+    background: linear-gradient(pink,black);
+    min-height: 100px;
+}
