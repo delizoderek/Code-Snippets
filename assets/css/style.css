@@ -1,6 +1,8 @@
 :root{
-    --container-border-radius: 7px;
+    --snippet-border-radius: 7px;
+    --snippet-background: rgb(27, 39, 150);
 }
+
 
 body{
     background: salmon;
@@ -12,41 +14,43 @@ main{
     flex-wrap: wrap;
 }
 
-.snippet-borders{
+.snippet-common{
     border-color: white;
     border-width: 2px;
-    border-radius: var(--container-border-radius);
+    border-radius: var(--snippet-border-radius);
+    background: var(--snippet-background);
+    color:white;
 }
 
 .card{
     display: flex;
+    position: relative;
     flex-direction: column;
     flex-grow: 1;
     flex-shrink: 1;
-    border-color: white;
-    border-width: 2px;
-    border-style: dashed;
-    border-radius: var(--container-border-radius);
-    position: relative;
     margin: 20px;
-    padding:10px;
+    padding:15px;
+    border-style: dashed;
 }
 
 .title {
     display:flex;
-    border-color:white;
-    border-radius: var(--container-border-radius);
-    border-style: solid;
-    border-width: 2px;
-    background: orange;
     position: absolute;
-    top: -40px;
-    width: 70%;
     align-self: center;
+    top: -42px;
+    width: 70%;
+    padding: 5px;
+    border-style: solid;
+    font-size: 24px;
+}
+
+.card:hover,
+.card:hover .title{
+    box-shadow: 0px 0px 10px 10px purple;
 }
 
 .box{
     display:flex;
-    background: linear-gradient(pink,black);
+    background: linear-gradient(-10deg, rgb(201, 107, 123) 0%,maroon 50%,black 100%);
     min-height: 100px;
 }
