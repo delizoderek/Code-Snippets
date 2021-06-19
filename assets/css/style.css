@@ -1,56 +1,102 @@
-:root{
-    --snippet-border-radius: 7px;
-    --snippet-background: rgb(27, 39, 150);
+:root {
+  --snippet-border-radius: 7px;
+  --snippet-background: rgb(119, 5, 5);
 }
 
-
-body{
-    background: salmon;
+body {
+  background: #485063;
+  margin: 0px 10px;
+  color:white;
 }
 
-main{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+header{
+    text-align: center;
 }
 
-.snippet-common{
-    border-color: white;
-    border-width: 2px;
-    border-radius: var(--snippet-border-radius);
-    background: var(--snippet-background);
-    color:white;
+pre{
+    margin: 0;
 }
 
-.card{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
-    margin: 20px;
-    padding:15px;
-    border-style: dashed;
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.snippet-common {
+  border-color: white;
+  border-width: 2px;
+  border-radius: var(--snippet-border-radius);
+  background: var(--snippet-background);
+  color: white;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100px;
+  margin: 20px;
+  padding: 15px;
+  border-style: dashed;
 }
 
 .title {
-    display:flex;
-    position: absolute;
-    align-self: center;
-    top: -42px;
-    width: 70%;
-    padding: 5px;
-    border-style: solid;
-    font-size: 24px;
+  display: flex;
+  position: absolute;
+  align-self: center;
+  top: -42px;
+  width: 70%;
+  padding: 5px;
+  border-style: solid;
+  font-size: 24px;
+}
+
+.all {
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+  margin: 0;
+}
+
+.box {
+  display: flex;
+  align-content: flex-start;
+  background: linear-gradient(
+    -10deg,
+    rgb(201, 107, 123) 0%,
+    maroon 50%,
+    black 100%
+  );
 }
 
 .card:hover,
-.card:hover .title{
-    box-shadow: 0px 0px 10px 10px purple;
+.card:hover .title {
+  box-shadow: 0px 0px 20px 0px rgba(255, 0, 0,0.5);
 }
 
-.box{
+#header-title{
     display:flex;
-    background: linear-gradient(-10deg, rgb(201, 107, 123) 0%,maroon 50%,black 100%);
-    min-height: 100px;
+    justify-content: center;
+    align-items: stretch;
+    background: #343d52;
+    color: white;
+    padding: 10px 0px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+
+#hover-test:hover{
+    transition: transform 1s ease;
+    transform: rotate(360deg);
+}
+@media screen and (max-width: 768px) {
+    main{
+        flex-direction: column;
+    }
 }
