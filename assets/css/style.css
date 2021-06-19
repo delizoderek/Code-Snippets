@@ -66,6 +66,8 @@ main {
 .box {
   display: flex;
   align-content: flex-start;
+  align-items: center;
+  flex-grow:1;
   background: linear-gradient(
     -10deg,
     rgb(201, 107, 123) 0%,
